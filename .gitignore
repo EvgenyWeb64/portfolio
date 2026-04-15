@@ -2,3 +2,6 @@ node_modules/
 .sass-cache/
 css/*.map
 
+
+# Demo builds
+demos/**/css/*.map
