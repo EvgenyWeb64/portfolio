@@ -1,0 +1,123 @@
+.btn-blue,
+a.btn-blue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-xl);
+    background-color: var(--color-accent);
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition:
+        background-color var(--transition-base),
+        transform var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-accent-hover);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn-link,
+a.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-bg-skills);
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.btn-resume,
+a.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-bg-alt);
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.btn-outline,
+a.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-xl);
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-accent);
+        color: #fff;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}

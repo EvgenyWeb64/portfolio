@@ -1,0 +1,55 @@
+.top-link {
+    position: fixed;
+    right: 24px;
+    bottom: 80px;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base),
+        background-color var(--transition-fast),
+        visibility var(--transition-base);
+
+    &:hover {
+        background-color: var(--color-accent);
+        transform: translateY(-2px);
+    }
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    @include mobile {
+        right: 16px;
+        bottom: 80px;
+        width: 44px;
+        height: 44px;
+    }
+}

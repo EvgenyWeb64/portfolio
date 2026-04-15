@@ -1,0 +1,27 @@
+// Base
+@import './base/reset';
+@import './base/mixins';
+@import './base/base';
+@import './base/container';
+
+// Секции
+@import './blocks/sticky-footer';
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/about';
+@import './blocks/portfolio';
+@import './blocks/cta';
+@import './blocks/tags';
+@import './blocks/footer';
+@import './blocks/certificates';
+
+// Блоки, Элементы
+@import './blocks/utils';
+@import './blocks/btns';
+@import './blocks/titles';
+@import './blocks/project-card';
+@import './blocks/project-page';
+
+// Скрипты
+@import './blocks/top-link';
+@import './blocks/modal';

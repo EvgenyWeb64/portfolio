@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — Евгений Шахманов | Frontend-разработчик</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
+    <meta name="description"
+        content="Портфолио frontend-разработчика Евгения Шахманова. Создание сайтов на HTML, CSS, JavaScript и WordPress.">
+</head>
+
+<body class="sticky-footer">
+
+    <!-- Header -->
+    <header class="header" id="top">
+        <div class="container">
+            <div class="header-row">
+                <div class="header__logo">
+                    <img src="../img/favicons/favicon.svg" alt="" class="header__icon">
+                    <div class="header__text">
+                        <span class="header__name">Евгений Шахманов</span>
+                        <span class="header__divider">|</span>
+                        <span class="header__role">Frontend-разработчик</span>
+                    </div>
+                </div>
+                <div class="header__socials">
+                    <a href="mailto:pudkovee@yandex.ru" target="_blank" aria-label="Email">
+                        <img src="../img/icons/email.svg" alt="">
+                    </a>
+                    <a href="https://wa.me/89179888392" target="_blank" aria-label="WhatsApp">
+                        <img src="../img/icons/whatsapp.svg" alt="">
+                    </a>
+                    <a href="https://t.me/pudkove" target="_blank" aria-label="Telegram">
+                        <img src="../img/icons/telegram.svg" alt="">
+                    </a>
+                </div>
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть меню">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="mobile-menu__header">
+                <span class="mobile-menu__name">Евгений Шахманов</span>
+                <span class="mobile-menu__role">Frontend-разработчик</span>
+            </div>
+            <div class="mobile-menu__socials">
+                <a href="mailto:pudkovee@yandex.ru" class="mobile-menu__link">
+                    <img src="../img/icons/email.svg" alt="">
+                    Email
+                </a>
+                <a href="https://wa.me/89179888392" target="_blank" class="mobile-menu__link">
+                    <img src="../img/icons/whatsapp.svg" alt="">
+                    WhatsApp
+                </a>
+                <a href="https://t.me/pudkove" target="_blank" class="mobile-menu__link">
+                    <img src="../img/icons/telegram.svg" alt="">
+                    Telegram
+                </a>
+            </div>
+            <div class="mobile-menu__actions">
+                <a href="https://t.me/pudkove" target="_blank" class="btn-blue">
+                    Связаться
+                </a>
+                <a href="../resume.pdf" download class="btn-outline mobile-resume-btn">
+                    Скачать резюме
+                </a>
+            </div>
+            <div class="mobile-menu__phone">
+                <a href="tel:+79179888392">+7 (917) 988-83-92</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- Portfolio Page -->
+        <section class="project-page">
+            <div class="container">
+                <div class="project-page__header-row">
+                    <a href="../index.html#portfolio" class="project-page__back">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        На главную
+                    </a>
+                    <h1 class="project-page__title title">Портфолио</h1>
+                    <p class="project-page__subtitle">Все мои работы</p>
+                </div>
+
+                <div class="project-page__grid">
+                    <!-- DFD -->
+                    <div class="project-page__card animate-on-scroll">
+                        <div class="project-page__img">
+                            <img src="../img/portfolio/dfd.jpg" alt="Интернет-магазин кроссовок DFD">
+                        </div>
+                        <div class="project-page__content">
+                            <h2 class="project-page__card-title">Интернет-магазин кроссовок и одежды</h2>
+                            <p class="project-page__card-text">Полная настройка интернет-магазина на базе WordPress,
+                                подключение WooCommerce.</p>
+                            <p class="project-page__card-text">Настройка хостинга, подключение SSL-сертификата,
+                                подключение почты и автоматической отправки сообщений, настройка платежей и доставки,
+                                загрузка и настройка каталога товаров, настройка страниц через Elementor, работа с
+                                плагинами, дополнительная настройка функционала через скрипты JS.</p>
+                            <div class="project-page__card-tags">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-page__card-btns">
+                                <a href="https://dfdmarket.ru" target="_blank" class="btn-link">
+                                    <img src="../img/icons/link.svg" alt="">
+                                    Смотреть демо
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KPGP -->
+                    <div class="project-page__card animate-on-scroll">
+                        <div class="project-page__img">
+                            <img src="../img/portfolio/kpgp.jpg" alt="Сайт дистрибьютора KPGP">
+                        </div>
+                        <div class="project-page__content">
+                            <h2 class="project-page__card-title">Сайт дистрибьютора KPGP</h2>
+                            <p class="project-page__card-text">Верстка лендинга. Одностраничный сайт для дистрибьютора
+                                автомобильных запчастей.</p>
+                            <p class="project-page__card-text">Форма обратной связи, использование flex-box, адаптация
+                                под мобильные устройства.</p>
+                            <div class="project-page__card-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">SCSS</span>
+                            </div>
+                            <div class="project-page__card-btns">
+                                <a href="https://kpgp.net" target="_blank" class="btn-link">
+                                    <img src="../img/icons/link.svg" alt="">
+                                    Смотреть демо
+                                </a>
+                                <a href="https://github.com/EvgenyWeb64/kpgp" target="_blank" class="btn-link">
+                                    <img src="../img/icons/github.svg" alt="">
+                                    GitHub проекта
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CoWorks -->
+                    <div class="project-page__card animate-on-scroll">
+                        <div class="project-page__img">
+                            <img src="../img/portfolio/coworks.jpg" alt="Сайт коворкинга CoWorks">
+                        </div>
+                        <div class="project-page__content">
+                            <h2 class="project-page__card-title">Сайт коворкинга CoWorks</h2>
+                            <p class="project-page__card-text">Верстка лендинга. Одностраничный сайт с информацией о
+                                коворкинге.</p>
+                            <p class="project-page__card-text">Форма обратной связи, модальные окна, карта, аккордеон,
+                                адаптация под мобильные устройства, мобильная навигация.</p>
+                            <div class="project-page__card-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">SCSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-page__card-btns">
+                                <a href="https://pudkove.tw1.ru/coworking/index.html" target="_blank" class="btn-link">
+                                    <img src="../img/icons/link.svg" alt="">
+                                    Смотреть демо
+                                </a>
+                                <a href="https://github.com/EvgenyWeb64/coworks" target="_blank" class="btn-link">
+                                    <img src="../img/icons/github.svg" alt="">
+                                    GitHub проекта
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epic Travel -->
+                    <div class="project-page__card animate-on-scroll">
+                        <div class="project-page__img">
+                            <img src="../img/portfolio/epic-travel.jpg" alt="Сайт туристического агентства Epic Travel">
+                        </div>
+                        <div class="project-page__content">
+                            <h2 class="project-page__card-title">Сайт туристического агентства EpicTravel</h2>
+                            <p class="project-page__card-text">Верстка сайта-визитки. 4 страницы, форма обратной связи,
+                                мобильная адаптация, retina ready.</p>
+                            <p class="project-page__card-pages">Страницы:</p>
+                            <ul class="project-page__card-list">
+                                <li><a href="https://pudkove.tw1.ru/epic-travel/index.html" target="_blank">Главная</a>
+                                </li>
+                                <li><a href="https://pudkove.tw1.ru/epic-travel/tours.html" target="_blank">Туры и
+                                        направления</a></li>
+                                <li><a href="https://pudkove.tw1.ru/epic-travel/about.html" target="_blank">О
+                                        компании</a></li>
+                                <li><a href="https://pudkove.tw1.ru/epic-travel/contacts.html"
+                                        target="_blank">Контакты</a></li>
+                            </ul>
+                            <div class="project-page__card-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">SCSS</span>
+                            </div>
+                            <div class="project-page__card-btns">
+                                <a href="https://pudkove.tw1.ru/epic-travel/index.html" target="_blank"
+                                    class="btn-link">
+                                    <img src="../img/icons/link.svg" alt="">
+                                    Смотреть демо
+                                </a>
+                                <a href="https://github.com/EvgenyWeb64/epic-travel" target="_blank" class="btn-link">
+                                    <img src="../img/icons/github.svg" alt="">
+                                    GitHub проекта
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__wrapper animate-on-scroll">
+                    <div class="cta__content">
+                        <h2 class="cta__title">Есть предложения по работе или идеи?</h2>
+                        <p class="cta__text">Напишите мне — обсудим ваш проект и найдем лучшее решение</p>
+                        <a href="https://t.me/pudkove" target="_blank" class="btn-blue">
+                            <img src="../img/btns/telegram.svg" alt="">
+                            Написать в Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">© 2024–2026 Евгений Шахманов</p>
+                <div class="footer__links">
+                    <a href="https://github.com/EvgenyWeb64" target="_blank">GitHub</a>
+                    <a href="https://t.me/pudkove" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка НАВЕРХ -->
+    <a href="#top" class="top-link" id="scrollToTopBtn" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Скрипты -->
+    <script src="../js/scrollToTop.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+.about {
+    padding: 60px 0;
+
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.about__header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+.about__title {
+    margin: 0;
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.about__card {
+    padding: 30px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+
+    @include tablet {
+        padding: 24px;
+    }
+
+    @include mobile {
+        padding: 20px;
+    }
+}
+
+.about__card--skills {
+    background-color: var(--color-bg-skills);
+}
+
+.about__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about__text {
+    line-height: 1.7;
+    color: var(--color-secondary);
+
+    p:last-child {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-top: 16px;
+    }
+
+    a {
+        font-weight: 500;
+    }
+}
+
+.about__specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.spec__item {
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    transition: transform var(--transition-fast);
+
+    &--html {
+        background-color: var(--badge-html);
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+    &--css {
+        background-color: var(--badge-css);
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 0.25s;
+    }
+    &--scss {
+        background-color: var(--badge-scss);
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+    &--js {
+        background-color: var(--badge-js);
+        color: #000;
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 0.75s;
+    }
+    &--vue {
+        background-color: #42b883;
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 1s;
+    }
+    &--wp {
+        background-color: var(--badge-wp);
+        animation: specsWave 3s ease-in-out infinite;
+        animation-delay: 1.25s;
+    }
+}
+
+@keyframes specsWave {
+    0%,
+    8%,
+    100% {
+        transform: translateY(0);
+    }
+    4% {
+        transform: translateY(-2px);
+    }
+}
+
+.about__skills-list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about__skills-list li {
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: var(--color-secondary);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        background-color: var(--color-accent);
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "sass scss/main.scss css/main.css --style=compressed --source-map",
+        "watch": "sass scss/main.scss css/main.css --style=compressed --source-map --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "sass": "^1.99.0"
+    }
+}

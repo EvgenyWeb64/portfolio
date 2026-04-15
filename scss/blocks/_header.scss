@@ -1,0 +1,321 @@
+.header {
+    padding: 16px 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.95);
+
+    @include mobile {
+        padding: 12px 0;
+    }
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include mobile {
+        padding-left: 4px;
+    }
+}
+
+.header__icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: block;
+    max-width: none;
+    max-height: none;
+    margin-left: 4px;
+}
+
+.header__text {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
+    position: absolute;
+    pointer-events: none;
+
+    .header--scrolled & {
+        opacity: 1;
+        position: relative;
+        pointer-events: all;
+        transform: translateX(0);
+    }
+
+    @include mobile {
+        // На мобильных текст никогда не показывается
+        display: none !important;
+    }
+}
+
+.header__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.header__divider {
+    color: var(--color-primary);
+    font-weight: 400;
+    opacity: 0.3;
+}
+
+.header__role {
+    font-size: 14px;
+    color: var(--color-secondary);
+    font-weight: 400;
+    white-space: nowrap;
+
+    @include mobile {
+        font-size: 13px;
+    }
+}
+
+.header__socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+        width: 24px;
+        height: 24px;
+        transition:
+            transform var(--transition-base),
+            opacity var(--transition-fast);
+        opacity: 0.7;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
+// Бургер-кнопка
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-bg-alt);
+    }
+
+    span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--color-primary);
+        border-radius: 2px;
+        transition:
+            transform var(--transition-base),
+            opacity var(--transition-base);
+    }
+
+    &.burger--active {
+        span {
+            &:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    }
+
+    @include mobile {
+        display: flex;
+    }
+}
+
+// Мобильное меню
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        visibility var(--transition-base),
+        opacity var(--transition-base);
+
+    &.mobile-menu--active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.mobile-menu__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.mobile-menu__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    max-width: 85%;
+    height: 100%;
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-lg);
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+
+    .mobile-menu--active & {
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    svg {
+        width: 22px;
+        height: 22px;
+        stroke: var(--color-secondary);
+        stroke-width: 2;
+        stroke-linecap: round;
+        transition: stroke var(--transition-fast);
+    }
+
+    &:hover svg {
+        stroke: var(--color-primary);
+    }
+}
+
+.mobile-menu__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-menu__name {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-primary);
+}
+
+.mobile-menu__role {
+    font-size: 14px;
+    color: var(--color-secondary);
+}
+
+.mobile-menu__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.mobile-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+        background-color: var(--color-bg-alt);
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.mobile-menu__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+
+    .btn-blue,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.mobile-menu__phone {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+
+    a {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+}
+
+// Кнопка резюме в мобильном меню — перебиваем стили btn-outline
+.mobile-resume-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}

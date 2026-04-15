@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:300,400,500,600,700,800);
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    // Шрифты
+    --font-family: 'Manrope', sans-serif;
+
+    // Цвета
+    --color-primary: #0a0a0a;
+    --color-secondary: #64748b;
+    --color-accent: #2563eb;
+    --color-accent-hover: #1d4ed8;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-bg-skills: #f1f5f9;
+    --color-bg-cta: #f8fafc;
+    --color-footer: #0f172a;
+    --color-border: #e2e8f0;
+    --color-tags: #64748b;
+
+    // Бейджи навыков
+    --badge-html: #414141;
+    --badge-css: #39a0ff;
+    --badge-scss: #dd6adf;
+    --badge-js: #ffce20;
+    --badge-wp: #21759b;
+
+    // Скругления
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    // Тени
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    // Переходы
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+    --transition-slow: 0.4s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-accent-hover);
+    }
+}
+
+a:focus,
+button:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-accent);
+    outline-style: auto;
+}
+
+p + p {
+    margin-top: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

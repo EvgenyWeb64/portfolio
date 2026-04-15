@@ -1,0 +1,47 @@
+.portfolio {
+    padding: 60px 0;
+    scroll-margin-top: 50px;
+
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.portfolio__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+.portfolio__title {
+    margin: 0;
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.portfolio__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

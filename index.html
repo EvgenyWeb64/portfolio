@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Евгений Шахманов | Frontend-разработчик</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <meta name="description"
+        content="Портфолио frontend-разработчика Евгения Шахманова. Создание сайтов на HTML, CSS, JavaScript и WordPress.">
+</head>
+
+<body class="sticky-footer">
+
+    <!-- Header -->
+    <header class="header" id="top">
+        <div class="container">
+            <div class="header-row">
+                <div class="header__logo">
+                    <img src="./img/favicons/favicon.svg" alt="" class="header__icon">
+                    <div class="header__text">
+                        <span class="header__name">Евгений Шахманов</span>
+                        <span class="header__divider">|</span>
+                        <span class="header__role">Frontend-разработчик</span>
+                    </div>
+                </div>
+                <div class="header__socials">
+                    <a href="mailto:pudkovee@yandex.ru" target="_blank" aria-label="Email">
+                        <img src="./img/icons/email.svg" alt="">
+                    </a>
+                    <a href="https://wa.me/89179888392" target="_blank" aria-label="WhatsApp">
+                        <img src="./img/icons/whatsapp.svg" alt="">
+                    </a>
+                    <a href="https://t.me/pudkove" target="_blank" aria-label="Telegram">
+                        <img src="./img/icons/telegram.svg" alt="">
+                    </a>
+                </div>
+                <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть меню">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="mobile-menu__header">
+                <span class="mobile-menu__name">Евгений Шахманов</span>
+                <span class="mobile-menu__role">Frontend-разработчик</span>
+            </div>
+            <div class="mobile-menu__socials">
+                <a href="mailto:pudkovee@yandex.ru" class="mobile-menu__link">
+                    <img src="./img/icons/email.svg" alt="">
+                    Email
+                </a>
+                <a href="https://wa.me/89179888392" target="_blank" class="mobile-menu__link">
+                    <img src="./img/icons/whatsapp.svg" alt="">
+                    WhatsApp
+                </a>
+                <a href="https://t.me/pudkove" target="_blank" class="mobile-menu__link">
+                    <img src="./img/icons/telegram.svg" alt="">
+                    Telegram
+                </a>
+            </div>
+            <div class="mobile-menu__actions">
+                <a href="https://t.me/pudkove" target="_blank" class="btn-blue">
+                    Связаться
+                </a>
+                <a href="./resume.pdf" download class="btn-outline mobile-resume-btn" target="_blank">
+                    Скачать резюме
+                </a>
+            </div>
+            <div class="mobile-menu__phone">
+                <a href="tel:+79179888392">+7 (917) 988-83-92</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <img src="./img/avatar.jpg" alt="Евгений Шахманов" class="hero__avatar">
+                    <h1 class="hero__name">Евгений Шахманов</h1>
+                    <p class="hero__role">Frontend-разработчик</p>
+                    <p class="hero__tagline" id="heroTagline"></p>
+                    <div class="hero__actions">
+                        <a href="#portfolio" class="btn-blue">Смотреть работы</a>
+                        <a href="https://t.me/pudkove" target="_blank" class="btn-outline">
+                            <img src="./img/icons/telegram.svg" alt="">
+                            Связаться
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__header-row animate-on-scroll">
+                    <h2 class="about__title title">Обо мне</h2>
+                    <a href="./resume.pdf" class="btn-resume" target="_blank" download>
+                        <img src="./img/icons/resume.svg" alt="">
+                        Скачать резюме
+                    </a>
+                </div>
+                <div class="about__content">
+                    <div class="about__card animate-on-scroll">
+                        <p class="about__subtitle">Мой опыт</p>
+                        <div class="about__text">
+                            <p>Frontend-разработчик с опытом более 2 лет в веб-разработке. Специализируюсь на создании
+                                адаптивных и производительных интерфейсов: HTML5, CSS3/SCSS, JavaScript (ES6+), Vue 3.
+                            </p>
+                            <p>Работаю с pixel perfect вёрсткой по макетам из Figma, использую BEM, CSS Grid/Flexbox.
+                                Понимаю основы Backend (PHP, MariaDB), умею эффективно работать в команде.</p>
+                            <p>Ознакомьтесь с моими работами на <a href="https://github.com/EvgenyWeb64"
+                                    target="_blank">GitHub</a></p>
+                            <p>Если вы ищете ответственного frontend-разработчика в команду — напишите
+                                мне или звоните:</p>
+                            <p>
+                                <a href="tel:+79179888392">+7 917 988-83-92</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--skills animate-on-scroll">
+                        <p class="about__subtitle">Технологии</p>
+                        <div class="about__specs">
+                            <div class="spec__item spec__item--html">HTML</div>
+                            <div class="spec__item spec__item--css">CSS</div>
+                            <div class="spec__item spec__item--scss">SCSS</div>
+                            <div class="spec__item spec__item--js">JavaScript</div>
+                            <div class="spec__item spec__item--vue">Vue.js</div>
+                            <div class="spec__item spec__item--wp">WordPress</div>
+                        </div>
+                        <ul class="about__skills-list">
+                            <li>HTML5, CSS3, адаптивная и семантическая верстка</li>
+                            <li>SCSS, BEM, CSS Grid/Flexbox, pixel perfect вёрстка</li>
+                            <li>JavaScript (ES6+), Vue 3, jQuery, Bootstrap</li>
+                            <li>Работа с Figma и Photoshop на уровне нарезки макета</li>
+                            <li>Основы Backend: PHP, MariaDB, интеграция с API</li>
+                            <li>Git, GitHub, CMS WordPress, Prompt Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="portfolio__header animate-on-scroll">
+                    <h2 class="portfolio__title title">Портфолио</h2>
+                    <p class="section-subtitle">Мои последние работы</p>
+                </div>
+                <div class="portfolio__grid">
+                    <!-- DFD -->
+                    <a data-modal-target="modal-dfd" class="project-card animate-on-scroll">
+                        <div class="project-card__header">
+                            <div class="project-card__img">
+                                <img src="./img/portfolio/dfd.jpg" alt="Интернет-магазин кроссовок DFD">
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__badge">Подробнее</span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Интернет-магазин кроссовок</h3>
+                            <p class="project-card__desc">Полноценный интернет-магазин на базе WordPress с WooCommerce
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- KPGP -->
+                    <a data-modal-target="modal-kpgp" class="project-card animate-on-scroll">
+                        <div class="project-card__header">
+                            <div class="project-card__img">
+                                <img src="./img/portfolio/kpgp.jpg" alt="Сайт дистрибьютора KPGP">
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__badge">Подробнее</span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Сайт дистрибьютора</h3>
+                            <p class="project-card__desc">Одностраничный лендинг для автомобильного дистрибьютора</p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">SCSS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio__actions">
+                    <a href="./projects/index.html" class="btn-outline">Смотреть всё</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates -->
+        <section class="certificates" id="certificates">
+            <div class="container">
+                <div class="certificates__header animate-on-scroll">
+                    <h2 class="certificates__title title">Сертификаты</h2>
+                    <p class="section-subtitle">Подтвержденные навыки</p>
+                </div>
+                <div class="certificates__grid">
+                    <!-- Webcademy -->
+                    <div class="certificate-card animate-on-scroll" data-modal-target="modal-webcademy">
+                        <div class="certificate-card__img">
+                            <img src="./img/certificates/webcademy.png" alt="Сертификат Webcademy">
+                            <div class="certificate-card__overlay">
+                                <p class="certificate-card__name">Продвинутый курс HTML/CSS</p>
+                                <p class="certificate-card__date">22.04.24 — 12.07.24</p>
+                                <p class="certificate-card__school">Webcademy</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card__body">
+                            <p class="certificate-card__school-name">Webcademy</p>
+                            <p class="certificate-card__desc">Продвинутый курс по HTML и CSS (+SCSS), мобильная верстка,
+                                BEM + основы JS, PHP, jQuery</p>
+                        </div>
+                    </div>
+
+                    <!-- Stepik -->
+                    <div class="certificate-card animate-on-scroll" data-modal-target="modal-stepik">
+                        <div class="certificate-card__img">
+                            <img src="./img/certificates/stepik.jpg" alt="Сертификат Stepik">
+                            <div class="certificate-card__overlay">
+                                <p class="certificate-card__name">База HTML и CSS</p>
+                                <p class="certificate-card__date">29.02.24 — 14.03.24</p>
+                                <p class="certificate-card__school">Stepik</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card__body">
+                            <p class="certificate-card__school-name">Stepik</p>
+                            <p class="certificate-card__desc">Базовый курс по HTML и CSS</p>
+                        </div>
+                    </div>
+
+                    <!-- WayUp -->
+                    <div class="certificate-card animate-on-scroll" data-modal-target="modal-wayup">
+                        <div class="certificate-card__img">
+                            <img src="./img/certificates/wayup.jpg" alt="Сертификат WayUp">
+                            <div class="certificate-card__overlay">
+                                <p class="certificate-card__name">База HTML/CSS + Figma</p>
+                                <p class="certificate-card__date">22.02.24 — 29.02.24</p>
+                                <p class="certificate-card__school">WayUp</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card__body">
+                            <p class="certificate-card__school-name">WayUp</p>
+                            <p class="certificate-card__desc">Базовый курс по HTML, CSS и Figma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__wrapper animate-on-scroll">
+                    <div class="cta__content">
+                        <h2 class="cta__title">Есть предложения по работе или идеи?</h2>
+                        <p class="cta__text">Напишите мне — обсудим ваш проект и найдем лучшее решение</p>
+                        <a href="https://t.me/pudkove" target="_blank" class="btn-blue">
+                            <img src="./img/btns/telegram.svg" alt="">
+                            Написать в Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">© 2024–2026 Евгений Шахманов</p>
+                <div class="footer__links">
+                    <a href="https://github.com/EvgenyWeb64" target="_blank">GitHub</a>
+                    <a href="https://t.me/pudkove" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+
+    <!-- Modal: KPGP -->
+    <div class="modal" id="modal-kpgp" data-original-parent="body" style="display: none;">
+        <div class="modal__img">
+            <img src="./img/portfolio/kpgp.jpg" alt="KPGP">
+        </div>
+        <div class="modal__content">
+            <h2 class="modal__title">Сайт дистрибьютора KPGP</h2>
+            <div class="modal__text">
+                <p>Верстка лендинга. Одностраничный сайт для дистрибьютора автомобильных запчастей.</p>
+                <p>Форма обратной связи, использование flex-box, адаптация под мобильные устройства.</p>
+            </div>
+            <div class="modal__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">SCSS</span>
+            </div>
+            <div class="modal__btns">
+                <a href="https://kpgp.net" target="_blank" class="btn-link">
+                    <img src="./img/icons/link.svg" alt="">
+                    Смотреть демо
+                </a>
+                <a href="https://github.com/EvgenyWeb64/kpgp" target="_blank" class="btn-link">
+                    <img src="./img/icons/github.svg" alt="">
+                    GitHub проекта
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: DFD -->
+    <div class="modal" id="modal-dfd" data-original-parent="body" style="display: none;">
+        <div class="modal__img">
+            <img src="./img/portfolio/dfd.jpg" alt="DFD">
+        </div>
+        <div class="modal__content">
+            <h2 class="modal__title">Интернет-магазин кроссовок и одежды</h2>
+            <div class="modal__text">
+                <p>Полная настройка интернет-магазина на базе WordPress, подключение WooCommerce.</p>
+                <p>Настройка хостинга, подключение SSL-сертификата, настройка почты и автоматической отправки сообщений,
+                    настройка платежей и доставки, загрузка и настройка каталога товаров, настройка страниц через
+                    Elementor, работа с плагинами, дополнительная настройка функционала через скрипты JS.</p>
+            </div>
+            <div class="modal__tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">JavaScript</span>
+            </div>
+            <div class="modal__btns">
+                <a href="https://dfdmarket.ru" target="_blank" class="btn-link">
+                    <img src="./img/icons/link.svg" alt="">
+                    Смотреть демо
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Webcademy -->
+    <div class="modal modal--certificate" id="modal-webcademy" data-original-parent="body" style="display: none;">
+        <div class="modal__img">
+            <img src="./img/certificates/webcademy.png" alt="Webcademy">
+        </div>
+    </div>
+
+    <!-- Modal: Stepik -->
+    <div class="modal modal--certificate" id="modal-stepik" data-original-parent="body" style="display: none;">
+        <div class="modal__img">
+            <img src="./img/certificates/stepik.jpg" alt="Stepik">
+        </div>
+    </div>
+
+    <!-- Modal: WayUp -->
+    <div class="modal modal--certificate" id="modal-wayup" data-original-parent="body" style="display: none;">
+        <div class="modal__img">
+            <img src="./img/certificates/wayup.jpg" alt="WayUp">
+        </div>
+    </div>
+
+    <!-- Кнопка НАВЕРХ -->
+    <a href="#top" class="top-link" id="scrollToTopBtn" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Скрипты -->
+    <script src="./js/scrollToTop.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
