@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
     <meta name="description"
         content="Портфолио frontend-разработчика Евгения Шахманова. Создание сайтов на HTML, CSS, JavaScript и WordPress.">
-    <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+    <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
 </head>
 
 <body class="sticky-footer">
@@ -19,7 +19,7 @@
     <header class="header" id="top">
         <div class="container">
             <div class="header-row">
-                <a href="../index.html" class="header__logo">
+                <a href="./index.html" class="header__logo">
                     <img src="../img/favicons/favicon.svg" alt="" class="header__icon">
                     <div class="header__text">
                         <span class="header__name">Евгений Шахманов</span>
@@ -29,8 +29,20 @@
                 </a>
                 <div class="header__socials">
                     <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
-                        <svg class="theme-toggle__sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        <svg class="theme-toggle__moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg class="theme-toggle__sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-toggle__moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
                     </button>
                     <a href="mailto:pudkovee@yandex.ru" target="_blank" aria-label="Email">
                         <img src="../img/icons/email.svg" alt="" class="icon-light">
@@ -65,9 +77,22 @@
             <div class="mobile-menu__header">
                 <span class="mobile-menu__name">Евгений Шахманов</span>
                 <span class="mobile-menu__role">Frontend-разработчик</span>
-                <button class="theme-toggle mobile-menu__theme-toggle" id="themeToggleMobile" aria-label="Переключить тему">
-                    <svg class="theme-toggle__sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    <svg class="theme-toggle__moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <button class="theme-toggle mobile-menu__theme-toggle" id="themeToggleMobile"
+                    aria-label="Переключить тему">
+                    <svg class="theme-toggle__sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-toggle__moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
                     <span class="mobile-menu__theme-label">Светлая тема</span>
                 </button>
             </div>
