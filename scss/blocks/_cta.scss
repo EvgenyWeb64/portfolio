@@ -11,7 +11,7 @@
 }
 
 .cta__wrapper {
-    background: linear-gradient(135deg, #e8f0fe 0%, #dbeafe 100%);
+    background: linear-gradient(315deg, var(--color-hero-gradient-from) 0%, var(--color-bg) 100%);
     border-radius: var(--radius-lg);
     padding: 60px 40px;
     display: flex;

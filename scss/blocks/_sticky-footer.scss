@@ -8,6 +8,14 @@ body {
 	flex-direction: column;
 }
 
+.main {
+    padding-top: var(--header-height);
+
+    @include mobile {
+        padding-top: var(--header-height-mobile);
+    }
+}
+
 .footer {
 	margin-top: auto;
 }

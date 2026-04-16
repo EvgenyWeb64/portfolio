@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalManager = createModalManager();
     modalManager.init();
 
-    // Анимации при скролле
-    initScrollAnimations();
+    // Переключение темы
+    initTheme();
 
     // Динамический хедер
     initDynamicHeader();
@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Эффект печатания в hero
     initTypingEffect();
+});
+
+// Анимации запускаем после полной загрузки страницы,
+// чтобы getBoundingClientRect() вернул реальные размеры с учётом картинок
+window.addEventListener('load', () => {
+    initScrollAnimations();
 });
 
 function createModalManager() {
@@ -131,11 +137,50 @@ function createModalManager() {
     return { init };
 }
 
+// Переключение темы
+function initTheme() {
+    const btns = document.querySelectorAll('.theme-toggle');
+    if (!btns.length) return;
+
+    function updateLabels() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.querySelectorAll('.mobile-menu__theme-label').forEach(el => {
+            el.textContent = isDark ? 'Тёмная тема' : 'Светлая тема';
+        });
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.removeItem('theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateLabels();
+        });
+    });
+
+    updateLabels();
+}
+
 // Анимации при скролле
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
     if (animatedElements.length === 0) return;
+
+    // Элементы уже в viewport при загрузке получают задержку по порядку
+    let inViewIndex = 0;
+    animatedElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.style.transitionDelay = `${inViewIndex * 120}ms`;
+            inViewIndex++;
+        }
+    });
 
     const observer = new IntersectionObserver(
         (entries) => {
@@ -147,8 +192,8 @@ function initScrollAnimations() {
             });
         },
         {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.05,
+            rootMargin: '0px 0px -30px 0px',
         },
     );
 
@@ -189,15 +234,21 @@ function initMobileMenu() {
 
     let isOpen = false;
 
+    let scrollY = 0;
+
     function openMenu() {
         isOpen = true;
+        scrollY = window.scrollY;
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        if (scrollbarWidth > 0) {
+            document.documentElement.style.paddingRight = scrollbarWidth + 'px';
+        }
         menu.classList.add('mobile-menu--active');
         burger.classList.add('burger--active');
         burger.setAttribute('aria-expanded', 'true');
         menu.setAttribute('aria-hidden', 'false');
-        // Фиксируем позицию чтобы не было скролла
         document.body.style.position = 'fixed';
-        document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.top = `-${scrollY}px`;
         document.body.style.width = '100%';
         document.body.classList.add('no-scroll');
     }
@@ -208,12 +259,13 @@ function initMobileMenu() {
         burger.classList.remove('burger--active');
         burger.setAttribute('aria-expanded', 'false');
         menu.setAttribute('aria-hidden', 'true');
-        // Восстанавливаем скролл
         document.body.classList.remove('no-scroll');
-        document.body.style.position = '';
         document.body.style.top = '';
+        document.body.style.position = '';
         document.body.style.width = '';
         document.body.style.paddingRight = '';
+        document.documentElement.style.paddingRight = '';
+        window.scrollTo({ top: scrollY, behavior: 'instant' });
     }
 
     burger.addEventListener('click', () => {
@@ -232,7 +284,7 @@ function initMobileMenu() {
 
     // Закрытие при клике на обычную ссылку
     menu.querySelectorAll(
-        'a:not([data-modal-target]), button:not([data-modal-target])',
+        'a:not([data-modal-target]), button:not([data-modal-target]):not(.theme-toggle)',
     ).forEach((link) => {
         link.addEventListener('click', closeMenu);
     });

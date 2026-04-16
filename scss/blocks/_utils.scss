@@ -17,6 +17,16 @@
     overflow-y: hidden;
 }
 
+// Иконки светлой/тёмной темы
+.icon-dark {
+    display: none;
+}
+
+[data-theme="dark"] {
+    .icon-light { display: none; }
+    .icon-dark { display: block; }
+}
+
 // Анимации при скролле
 .animate-on-scroll {
     opacity: 0;

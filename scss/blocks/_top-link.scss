@@ -21,12 +21,14 @@
     transition:
         opacity var(--transition-base),
         transform var(--transition-base),
-        background-color var(--transition-fast),
         visibility var(--transition-base);
 
     &:hover {
-        background-color: var(--color-accent);
         transform: translateY(-2px);
+    }
+
+    [data-theme="dark"] & {
+        background-color: var(--color-accent);
     }
 
     &--visible {
