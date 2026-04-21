@@ -11,7 +11,11 @@
 }
 
 .cta__wrapper {
-    background: linear-gradient(315deg, var(--color-hero-gradient-from) 0%, var(--color-bg) 100%);
+    background: linear-gradient(
+        315deg,
+        var(--color-hero-gradient-from) 0%,
+        var(--color-bg) 100%
+    );
     border-radius: var(--radius-lg);
     padding: 60px 40px;
     display: flex;
@@ -21,6 +25,27 @@
     text-align: center;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            150px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(37, 99, 235, 0.4) 0%,
+            transparent 70%
+        );
+        opacity: 0;
+        transition: opacity var(--transition-base);
+        pointer-events: none;
+        border-radius: inherit;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
 
     @include mobile {
         padding: 40px 24px;

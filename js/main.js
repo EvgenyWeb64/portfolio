@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Переключение темы
     initTheme();
 
+    // Spotlight в CTA
+    initCtaSpotlight();
+
     // Динамический хедер
     initDynamicHeader();
 
@@ -135,6 +138,20 @@ function createModalManager() {
     }
 
     return { init };
+}
+
+// Spotlight-эффект в CTA
+function initCtaSpotlight() {
+    const wrapper = document.querySelector('.cta__wrapper');
+    if (!wrapper) return;
+
+    wrapper.addEventListener('mousemove', (e) => {
+        const rect = wrapper.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        wrapper.style.setProperty('--mouse-x', `${x}%`);
+        wrapper.style.setProperty('--mouse-y', `${y}%`);
+    });
 }
 
 // Переключение темы
