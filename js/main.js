@@ -78,6 +78,14 @@ function createModalManager() {
             // из-за сочетания padding + overflow на разных элементах.
             document.documentElement.style.paddingRight = scrollbarWidth + 'px';
             document.body.style.paddingRight = '';
+
+            // Компенсируем смещение для фиксированных элементов
+            const header = document.querySelector('.header');
+            const scrollToTopBtn = document.querySelector('#scrollToTopBtn');
+
+            if (header) header.style.paddingRight = scrollbarWidth + 'px';
+            if (scrollToTopBtn)
+                scrollToTopBtn.style.marginRight = scrollbarWidth + 'px';
         }
 
         // Блокируем скролл
@@ -99,7 +107,8 @@ function createModalManager() {
             header.className = 'modal__header';
             const closeBtn = document.createElement('button');
             closeBtn.className = 'modal__close';
-            closeBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+            closeBtn.innerHTML =
+                '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
             closeBtn.setAttribute('aria-label', 'Закрыть');
             closeBtn.addEventListener('click', closeModal);
             header.appendChild(closeBtn);
@@ -134,6 +143,13 @@ function createModalManager() {
         document.documentElement.style.paddingRight = '';
         document.body.style.paddingRight = '';
 
+        // Убираем компенсацию у фиксированных элементов
+        const header = document.querySelector('.header');
+        const scrollToTopBtn = document.querySelector('#scrollToTopBtn');
+
+        if (header) header.style.paddingRight = '';
+        if (scrollToTopBtn) scrollToTopBtn.style.marginRight = '';
+
         activeModal = null;
     }
 
@@ -160,15 +176,17 @@ function initTheme() {
     if (!btns.length) return;
 
     function updateLabels() {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.querySelectorAll('.mobile-menu__theme-label').forEach(el => {
+        const isDark =
+            document.documentElement.getAttribute('data-theme') === 'dark';
+        document.querySelectorAll('.mobile-menu__theme-label').forEach((el) => {
             el.textContent = isDark ? 'Тёмная тема' : 'Светлая тема';
         });
     }
 
-    btns.forEach(btn => {
+    btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const isDark =
+                document.documentElement.getAttribute('data-theme') === 'dark';
             if (isDark) {
                 document.documentElement.removeAttribute('data-theme');
                 localStorage.removeItem('theme');
@@ -256,7 +274,8 @@ function initMobileMenu() {
     function openMenu() {
         isOpen = true;
         scrollY = window.scrollY;
-        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        const scrollbarWidth =
+            window.innerWidth - document.documentElement.clientWidth;
         if (scrollbarWidth > 0) {
             document.documentElement.style.paddingRight = scrollbarWidth + 'px';
         }
