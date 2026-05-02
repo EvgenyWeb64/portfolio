@@ -25,17 +25,40 @@
 .footer__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20px;
 
     @include mobile {
         flex-direction: column;
+        align-items: center;
         gap: 12px;
     }
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__copyright {
     margin: 0;
     font-weight: 400;
+}
+
+.footer__info {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 8px;
+    line-height: 1.4;
+
+    @include mobile {
+        font-size: 11px;
+    }
 }
 
 .footer__links {
